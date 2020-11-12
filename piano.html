@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.68/Tone.js "></script>
+    <title>Piano</title>
+
+    <style>
+        *{
+            
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+        }
+        h1{
+            margin-top: 2em;
+            text-align: center;
+        }
+        .piano{
+            height: 30vh;
+            width: 80vw;
+            background-image: radial-gradient(rgb(165, 165, 165), black);
+            border: 7px ridge black;
+            border-radius: 2em;
+            margin: 20vh auto;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .teclas{
+            position: absolute;
+            bottom: 1em;
+            border-radius: 0em 0em 2em 2em;
+            width: 95%;
+            height: 55%;
+            border: 1px solid white;
+        }
+
+        .tecla{
+            float: left;
+            width: 7.143%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 100%;
+            background-image: linear-gradient(aliceblue, ivory); 
+        }
+
+        .tecla:first-child{
+        
+            border-radius: 0 0 0 2em; 
+        }
+
+        .tecla:last-child{
+            border-radius: 0 0 2em 0; 
+        }
+
+        .tecla:hover{
+            opacity: .9;
+        }
+
+        .tecla:active{
+            box-shadow: 0px 0px 20px black inset;
+        }
+
+        span{
+            
+            color: white;
+            position: absolute;
+            top:5%;
+            left:5%;
+            font-size: 2em;
+        }
+
+        .speaker{
+            position: absolute;
+            top:3%;
+            right:3%;
+            width: 5%;
+            height: 10%;
+            rotate: 30deg;
+        }
+
+        .speaker hr{
+            color: white;
+            height: .2em;
+            background-color: aliceblue;
+        }
+
+        .speaker hr:first-child,
+        .speaker hr:last-child{
+            width: 60%;
+        }
+
+        .myStyle{
+            border: 3px solid blue;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>My first CEEDCV piano 4 desktop computers</h1>
+    <div class="piano">
+        <span>CASIsuena</span>
+        <div class="speaker">
+            <hr><hr><hr><hr>
+        </div>
+        <div class="teclas">
+            <div class="tecla" id="c4"></div>
+            <div class="tecla" id="d4"></div>
+            <div class="tecla" id="e4"></div>
+            <div class="tecla" id="f4"></div>
+            <div class="tecla" id="g4"></div>
+            <div class="tecla" id="a4"></div>
+            <div class="tecla" id="b4"></div>
+            <div class="tecla" id="c5"></div>
+            <div class="tecla" id="d5"></div>
+            <div class="tecla" id="e5"></div>
+            <div class="tecla" id="f5"></div>
+            <div class="tecla" id="g5"></div>
+            <div class="tecla" id="a5"></div>
+            <div class="tecla" id="b5"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
